@@ -21,6 +21,13 @@ The program accomplishes the following tasks:
 
 ## How to Run
 
+Program was written in Kotlin 1.8 using Oracle OpenJDK 20.0.1.
+
+To generate graphs you need to install **graphviz** library. On MacOS you can simply run:
+```
+brew install graphviz
+```
+
 To run the program with Maven, use the following command:
 
 ```bash
