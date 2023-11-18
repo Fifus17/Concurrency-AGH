@@ -7,8 +7,11 @@
       <sourceFolder url="file://$MODULE_DIR$/lab3/Concurrency/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lab4/Concurrency/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lab5/Concurrency/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lab6/TraceTheory/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="com.opencsv:opencsv:5.3" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>

@@ -39,8 +39,9 @@ public class Philosopher extends Thread{
         }
     }
 
-    public void summarize() {
+    public String[] summarize() {
         timeWaited = timeWaited/noIters;
         System.out.println("Philosopher " + id + " has waited on average for " + timeWaited + " ms");
+        return new String[]{String.valueOf(id), String.valueOf(timeWaited)};
     }
 }

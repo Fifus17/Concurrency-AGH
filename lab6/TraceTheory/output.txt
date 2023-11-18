@@ -1,0 +1,61 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.example:TraceTheory:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 68, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< org.example:TraceTheory >-----------------------
+[INFO] Building consoleApp 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:1.6.0:java (default-cli) @ TraceTheory ---
+Input(transactions=[Transaction(name=a, formula=x:=x+y), Transaction(name=b, formula=y:=y+2z), Transaction(name=c, formula=x:=3x+z), Transaction(name=d, formula=z:=y-z)], word=baadcb, vars=[x, y, z], fileName=example1)
+
+Relations(relations={a=[a, b, c], b=[a, b, d], c=[a, c, d], d=[b, c, d]})
+
+Dependency Matrix
+
+| |a|b|c|d|
+|a|1|1|1|0|
+|b|1|1|0|1|
+|c|1|0|1|1|
+|d|0|1|1|1|
+
+Independency Matrix
+
+| |a|b|c|d|
+|a|0|0|0|1|
+|b|0|0|1|0|
+|c|0|1|0|0|
+|d|1|0|0|0|
+
+Graph: 
+Node b, ID: 0, Forward: (b, 5), (d, 3), (a, 2), (a, 1)
+Node a, ID: 1, Forward: (b, 5), (c, 4), (a, 2)
+Node a, ID: 2, Forward: (b, 5), (c, 4)
+Node d, ID: 3, Forward: (b, 5), (c, 4)
+Node c, ID: 4, Forward: 
+Node b, ID: 5, Forward: 
+
+Minimized graph: 
+Node b, ID: 0, Forward: (d, 3), (a, 1)
+Node a, ID: 1, Forward: (a, 2)
+Node a, ID: 2, Forward: (b, 5), (c, 4)
+Node d, ID: 3, Forward: (b, 5), (c, 4)
+Node c, ID: 4, Forward: 
+Node b, ID: 5, Forward: 
+
+FNF([w]) = (b)(da)(a)(bc)
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.135 s
+[INFO] Finished at: 2023-11-19T00:40:14+01:00
+[INFO] ------------------------------------------------------------------------
