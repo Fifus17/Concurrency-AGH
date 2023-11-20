@@ -21,7 +21,7 @@ class InputParserTest {
                 Transaction('d', "z:=y-z")
             ),
             word = "baadcb",
-            vars = mutableSetOf('x', 'y', 'z'), ""
+            vars = mutableSetOf('x', 'y', 'z'), "graph"
         )
 
         // Then
@@ -51,7 +51,7 @@ class InputParserTest {
                 Transaction('f', "v:=x+v")
             ),
             word = "acdcfbbe",
-            vars = mutableSetOf('x', 'y', 'z', 'w', 'v'), ""
+            vars = mutableSetOf('x', 'y', 'z', 'w', 'v'), "graph"
         )
 
         // Then
